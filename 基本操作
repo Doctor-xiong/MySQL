@@ -1,0 +1,40 @@
+create table tt1(
+	id int not null,
+	name varchar(20)
+);
+
+
+create table tt2(
+	id int not null,
+	name varchar(20),
+	sex char(1) default '男'
+	);
+
+
+create table tt3(
+	id int not null comment "用户id，不能为空",
+	name varchar(20) comment "用户姓名，可以为空"
+	);
+
+alter table tt3 id id int zerofill;
+
+
+create table tt4(
+	id int primary key comment "描述学号，次列为主键",
+	name varchar(20) not null
+	);
+
+
+create table tt5(
+	id int auto_increment primary key,
+	name varchar(20) comment "描述姓名"
+	);
+
+create table tt7(
+	id int unique comment "描述学号，不能够重复",
+	name varchar(20)
+	);
+
+update tt7 set id=5 where id=2;
+
+delete from tt7 where id=2;
